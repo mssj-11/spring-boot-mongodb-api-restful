@@ -2,6 +2,7 @@ package com.mss.springboot.web.app.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,7 +24,9 @@ import lombok.RequiredArgsConstructor;
 public class PersonaControlador {
 	
 	
-	private final PersonaService personaService;
+	@Autowired
+	private PersonaService personaService;
+	
 	
 	
 	@PostMapping("/personas")
@@ -50,6 +53,8 @@ public class PersonaControlador {
 	public void update(@RequestBody Persona persona) {
 		personaService.save(persona);
 	}
+	
+	
 	
 	
 }
