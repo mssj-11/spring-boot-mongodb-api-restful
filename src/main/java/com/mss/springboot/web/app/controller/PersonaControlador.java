@@ -20,7 +20,7 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor	//	Genera el constructor
 @RestController
-@RequestMapping("/persona/api/v1")
+@RequestMapping("/api/v1")
 public class PersonaControlador {
 	
 	
