@@ -18,6 +18,7 @@ import com.mss.springboot.web.app.service.PersonaService;
 import lombok.RequiredArgsConstructor;
 
 
+
 @RequiredArgsConstructor	//	Genera el constructor
 @RestController
 @RequestMapping("/api/v1")
@@ -53,7 +54,6 @@ public class PersonaControlador {
 	public void update(@RequestBody Persona persona) {
 		personaService.save(persona);
 	}
-	
 	
 	
 	
