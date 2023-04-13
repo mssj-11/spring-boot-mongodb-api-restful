@@ -3,6 +3,7 @@ package com.mss.springboot.web.app.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.mss.springboot.web.app.model.Persona;
@@ -11,12 +12,15 @@ import com.mss.springboot.web.app.repository.PersonaRepositorio;
 import lombok.RequiredArgsConstructor;
 
 
+
 @Service
-@RequiredArgsConstructor	//	Genera el constructor
+//Genera el constructor
+@RequiredArgsConstructor
 public class PersonaService {
 	
 	
-	private final PersonaRepositorio personaRepositorio;
+	@Autowired
+	private PersonaRepositorio personaRepositorio;
 	
 	
 	
@@ -39,6 +43,7 @@ public class PersonaService {
 	public void deleteById(String id) {
 		personaRepositorio.deleteById(id);
 	}
+	
 	
 	
 	
